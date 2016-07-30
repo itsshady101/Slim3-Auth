@@ -10,10 +10,6 @@ class HomeController extends Controller
 
 	public function index($request, $response) 
 	{
-		User::create([
-			'name' => 'Mia',
-			'email' => 'mia@bangbros.com'
-		])
 		return $this->view->render($response, 'home.twig');
 	}
 }
