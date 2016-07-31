@@ -20,7 +20,6 @@ class Validator
 		}
 
 		$_SESSION['errors'] = $this->errors;
-		$_SESSION['pussy'] = "Eat";
 
 		return $this;
 	}
