@@ -1,6 +1,7 @@
 <?php 
 
 // Thanks to alex garett from codecourse for making this awesome series
+use Respect\Validation\Validator as v;
 
 session_start();
 
@@ -61,5 +62,6 @@ $container['validator'] = function ($container) {
 $app->add(new \App\Middleware\ValidationErrorsMiddleware($container));
 $app->add(new \App\Middleware\OldInputMiddleware($container));
 
+v::with('App\\Validation\\Rules\\');
 
 require __DIR__ . '/../app/routes.php';
